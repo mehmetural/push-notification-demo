@@ -4,6 +4,23 @@
   <li><a href='https://medium.com/@uralmehmet/a2280d18eda1'>Go to the article</a> about this repo.</li>
 </ul>
 <p>
-  <input type="text" placeholder="username" #username>
-  <button>Register for push notification</button>
+  <button [disabled]="isRegisteredForPush()"
+    (click)='registerForPush()'>{{!isRegisteredForPush() ? 'Register for push notification' :'Already Registered'}}</button>
+  <button (click)='removeSubscription()' *ngIf='isRegisteredForPush()'>Remove Subscription</button>
 </p>
+<p>
+  <input type="text" #title placeholder="Title">
+  <input type="text" #body placeholder="Body">
+  <button (click)="sendNotification(title.value,body.value)">Send Notification</button><br>
+  <button (click)="sendNotificationWithDelay(title.value,body.value)">Send Notification and open new tab</button>
+</p>
+<pre class='col-lg-6'>
+    <code *ngFor='let message of messages'>
+      {{message | json}}
+    </code>
+</pre>
+<pre class='col-lg-6'>
+  <code>
+    {{error | json}}
+  </code>
+</pre>

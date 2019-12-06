@@ -17,5 +17,7 @@ export class FirebasePushNotificationService {
 
   requestPermission = () => this.angularFireMessaging.requestToken;
 
+  removeToken = (token: string) => this.angularFireMessaging.deleteToken(token);
+
   receiveMessage = () => this.angularFireMessaging.messages;
 }

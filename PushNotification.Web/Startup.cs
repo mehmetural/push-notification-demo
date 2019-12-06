@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PushNotification.Web.Services;
 
 namespace PushNotification.Web
 {
@@ -26,6 +27,9 @@ namespace PushNotification.Web
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddTransient<IPushNotificationService, PushNotificationService>();
+            services.AddTransient<IDbService, DbService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
