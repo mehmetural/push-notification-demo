@@ -22,13 +22,13 @@ import { AngularFireMessagingModule } from '@angular/fire/messaging';
     HttpClientModule,
     FormsModule,
     AngularFireModule.initializeApp({
-      apiKey: 'AIzaSyBpnZoQptvMCywJWuYRDqkYWhzEHo6DcMs',
-      authDomain: 'netcore-push-notification-demo.firebaseapp.com',
-      databaseURL: 'https://netcore-push-notification-demo.firebaseio.com',
-      projectId: 'netcore-push-notification-demo',
-      storageBucket: 'netcore-push-notification-demo.appspot.com',
-      messagingSenderId: '80809731750',
-      appId: '1:80809731750:web:f05a69f6db4c364aa93667'
+      apiKey: 'your-api-key',
+      authDomain: 'your-app-domain',
+      databaseURL: 'your-db-url',
+      projectId: 'your-project-id',
+      storageBucket: 'your-storage-bucket',
+      messagingSenderId: 'your-sender-id',
+      appId: 'your-app-id'
     }),
     AngularFireMessagingModule,
     RouterModule.forRoot([

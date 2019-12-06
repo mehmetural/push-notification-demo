@@ -6,5 +6,5 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "messagingSenderId": "80809731750"
+  "messagingSenderId": "YOUR-SENDER-ID"
 }
